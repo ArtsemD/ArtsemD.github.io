@@ -6,6 +6,7 @@ export const profile = {
   timeZone: 'Europe/Warsaw',
   bio: 'I take B2B products from the first Figma sketch to production code in Vue, React and TypeScript, and own the design systems they are built with.',
   photo: '/me.jpg',
+  photoSmall: '/me-sm.jpg',
   // Fill in to show the "Email me" button and the footer link.
   email: '',
   links: [
