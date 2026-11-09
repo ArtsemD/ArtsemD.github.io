@@ -18,19 +18,21 @@ const links = [
 </script>
 
 <template>
-  <header class="fixed inset-x-0 top-0 z-50 transition-[background,backdrop-filter,border-color] duration-500" :class="scrolled ? 'border-b border-line bg-ink/70 backdrop-blur-xl' : 'border-b border-transparent'">
-    <nav class="wrap grid h-16 grid-cols-[1fr_auto_1fr] items-center" aria-label="Main">
-      <ul class="hidden items-center gap-6 text-sm text-dim md:flex">
-        <li v-for="l in links" :key="l.to">
-          <RouterLink :to="l.to" class="transition-colors hover:text-fg">{{ l.label }}</RouterLink>
-        </li>
-      </ul>
-      <RouterLink to="/" class="col-start-1 justify-self-start text-fg md:col-start-2 md:justify-self-center" aria-label="Artsem D., home">
-        <LogoMark />
-      </RouterLink>
-      <div class="col-start-3 flex items-center justify-end gap-4">
-        <span class="label hidden lg:inline">Open to new projects</span>
-        <RouterLink to="/#contact" class="rounded-full border border-line-2 px-4 py-2 text-sm text-fg transition-colors hover:border-fg hover:bg-fg hover:text-ink">Let’s talk</RouterLink>
+  <header class="fixed inset-x-0 top-0 z-50 transition-[background,backdrop-filter,box-shadow] duration-500" :class="scrolled ? 'bg-bg/80 shadow-[0_1px_0_var(--color-line)] backdrop-blur-xl' : ''">
+    <nav class="wrap flex h-16 items-center justify-between gap-6" aria-label="Main">
+      <RouterLink to="/" class="text-fg" aria-label="Artsem D., home"><LogoMark /></RouterLink>
+      <div class="flex items-center gap-7">
+        <ul class="hidden items-center gap-7 text-[15px] text-dim md:flex">
+          <li v-for="l in links" :key="l.to">
+            <RouterLink :to="l.to" class="transition-colors hover:text-fg">{{ l.label }}</RouterLink>
+          </li>
+        </ul>
+        <RouterLink to="/#contact" class="group inline-flex items-center gap-2 rounded-full bg-fg py-2 pr-2 pl-4 text-sm text-card transition-colors hover:bg-accent">
+          Let’s talk
+          <span class="grid size-6 place-items-center rounded-full bg-card/15 transition-transform duration-500 group-hover:rotate-45" aria-hidden="true">
+            <svg viewBox="0 0 16 16" class="size-3"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.6" /></svg>
+          </span>
+        </RouterLink>
       </div>
     </nav>
   </header>

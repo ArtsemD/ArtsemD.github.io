@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import Home from './pages/HomePage.vue'
 import { reveal } from './reveal'
+import { tilt } from './tilt'
 import './style.css'
 
 const router = createRouter({
@@ -14,9 +15,9 @@ const router = createRouter({
   ],
   scrollBehavior(to, _from, saved) {
     if (saved) return saved
-    if (to.hash) return { el: to.hash, top: 80 }
+    if (to.hash) return { el: to.hash, top: 72, behavior: 'smooth' }
     return { top: 0 }
   },
 })
 
-createApp(App).use(router).directive('reveal', reveal).mount('#app')
+createApp(App).use(router).directive('reveal', reveal).directive('tilt', tilt).mount('#app')

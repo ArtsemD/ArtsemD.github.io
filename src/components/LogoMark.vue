@@ -1,9 +1,10 @@
 <template>
-  <span class="inline-flex items-center gap-2.5">
+  <span class="inline-flex items-center gap-2">
     <svg viewBox="0 0 24 24" class="size-5" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-      <circle cx="12" cy="12" r="2.2" fill="currentColor" />
+      <path d="M12 21v-8m0 0L6.5 7.5M12 13l5.5-5.5M12 16.5l-3.5-2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+      <rect x="3" y="3" width="6" height="5" rx="1.6" fill="#ff4f17" />
+      <rect x="15" y="3" width="6" height="5" rx="1.6" fill="currentColor" />
     </svg>
-    <span class="font-mono text-[13px] font-medium tracking-[0.18em]">ARTSEM&nbsp;D.</span>
+    <span class="text-[15px] font-medium tracking-tight">Artsem D.</span>
   </span>
 </template>
