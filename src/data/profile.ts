@@ -8,7 +8,7 @@ export const profile = {
   photo: '/me.jpg',
   photoSmall: '/me-sm.jpg',
   // Fill in to show the "Email me" button and the footer link.
-  email: '',
+  email: 'artem.dudinskij@cogniteq.com',
   links: [
     { label: 'GitHub', href: 'https://github.com/ArtsemD' },
     { label: 'Live demo', href: 'https://artsemd.github.io/atrium-agent-workspace/' },
