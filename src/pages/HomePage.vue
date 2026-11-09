@@ -78,8 +78,8 @@ const github = profile.links.find((l) => l.label === 'GitHub')!
   <!-- About -->
   <section id="about" class="wrap scroll-mt-16 py-24 md:py-32" aria-labelledby="about-title">
     <div class="grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
-      <div v-tilt="4" class="overflow-hidden rounded-[22px]" v-reveal>
-        <AvatarPhoto size="aspect-[4/5] w-full" />
+      <div v-tilt="4" v-reveal>
+        <AvatarPhoto size="aspect-[4/5] w-full rounded-[22px] [clip-path:inset(0_round_22px)]" />
       </div>
       <div class="flex flex-col">
         <h2 id="about-title" class="text-[clamp(2.4rem,5.4vw,4.75rem)] leading-[0.95] font-medium tracking-[-0.04em]" v-reveal>Hi, I’m <span class="serif tracking-[-0.01em] text-accent">Artsem</span>.</h2>
