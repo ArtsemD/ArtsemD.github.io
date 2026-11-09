@@ -35,7 +35,7 @@ onMounted(async () => {
   let done = false
   const tasks = [
     document.fonts?.ready,
-    import('../three/tree'),
+    import('../three/layers'),
     new Promise((r) => setTimeout(r, 1300)), // long enough to read, short enough not to annoy
   ]
   tasks.forEach((t) => Promise.resolve(t).then(() => (target += 88 / tasks.length)).catch(() => (target += 88 / tasks.length)))
@@ -73,7 +73,7 @@ onMounted(async () => {
       </p>
       <div class="mt-4 flex items-end justify-between gap-6">
         <p class="text-[clamp(4rem,16vw,13rem)] leading-[0.8] font-medium tracking-[-0.05em] tabular-nums">{{ Math.floor(shown).toString().padStart(3, '0') }}</p>
-        <p class="serif mb-2 hidden text-[clamp(1.5rem,3vw,2.5rem)] text-card/70 md:block">growing the tree…</p>
+        <p class="serif mb-2 hidden text-[clamp(1.5rem,3vw,2.5rem)] text-card/70 md:block">assembling the interface…</p>
       </div>
       <div class="mt-6 h-px w-full bg-card/15">
         <div class="h-px bg-accent" :style="{ width: `${shown}%` }" />

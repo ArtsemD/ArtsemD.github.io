@@ -5,7 +5,7 @@ import AvatarPhoto from '../components/AvatarPhoto.vue'
 import CountUp from '../components/CountUp.vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import TilesCanvas from '../components/TilesCanvas.vue'
-import TreeCanvas from '../components/TreeCanvas.vue'
+import LayersCanvas from '../components/LayersCanvas.vue'
 
 const demo = profile.links.find((l) => l.label === 'Live demo')!
 const github = profile.links.find((l) => l.label === 'GitHub')!
@@ -13,7 +13,7 @@ const github = profile.links.find((l) => l.label === 'GitHub')!
 
 <template>
   <!-- Hero -->
-  <section class="wrap grid min-h-[100svh] items-center gap-6 pt-24 pb-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:pt-16" aria-labelledby="hero-title">
+  <section class="wrap grid min-h-[100svh] items-center gap-6 pt-24 pb-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.15fr)] lg:pt-16" aria-labelledby="hero-title">
     <div>
       <div class="intro flex items-center gap-3">
         <AvatarPhoto />
@@ -22,7 +22,7 @@ const github = profile.links.find((l) => l.label === 'GitHub')!
           <span class="text-dim">{{ profile.role }} at {{ profile.company }}</span>
         </p>
       </div>
-      <h1 id="hero-title" class="intro mt-8 text-[clamp(2.9rem,6.6vw,6.4rem)] leading-[0.95] font-medium tracking-[-0.045em] [--d:120ms]">
+      <h1 id="hero-title" class="intro mt-8 text-[clamp(2.9rem,5.9vw,5.6rem)] leading-[0.95] font-medium tracking-[-0.045em] [--d:120ms]">
         Designing products, <span class="serif tracking-[-0.02em] text-accent">and shipping</span> the code.
       </h1>
       <p class="intro mt-7 max-w-[34rem] text-lg text-dim [--d:240ms]">{{ profile.bio }}</p>
@@ -37,8 +37,8 @@ const github = profile.links.find((l) => l.label === 'GitHub')!
         </div>
       </dl>
     </div>
-    <div class="intro h-[58svh] min-h-[380px] lg:h-[82svh] [--d:200ms]">
-      <TreeCanvas />
+    <div class="intro h-[62svh] min-h-[380px] md:-mr-10 lg:h-[82svh] [--d:200ms]">
+      <LayersCanvas />
     </div>
   </section>
 
