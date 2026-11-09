@@ -7,8 +7,6 @@ export const profile = {
   bio: 'I take B2B products from the first Figma sketch to production code in Vue, React and TypeScript, and own the design systems they are built with.',
   photo: '/me.jpg',
   photoSmall: '/me-sm.jpg',
-  // Fill in to show the "Email me" button and the footer link.
-  email: 'artem.dudinskij@cogniteq.com',
   links: [
     { label: 'GitHub', href: 'https://github.com/ArtsemD' },
     { label: 'Live demo', href: 'https://artsemd.github.io/atrium-agent-workspace/' },

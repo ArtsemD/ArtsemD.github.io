@@ -13,7 +13,7 @@ defineProps<{ project: Project; flip?: boolean }>()
             <i v-for="n in 3" :key="n" class="size-1.5 rounded-full bg-fg/15" />
             <span class="ml-2 truncate font-mono text-[10px] text-faint">{{ project.cover.bar }}</span>
           </div>
-          <img :src="project.cover.src" :alt="`${project.title}, ${project.kind.toLowerCase()} screen`" loading="lazy" decoding="async" class="block w-full" />
+          <img v-scroll3d="'zoom'" :src="project.cover.src" :alt="`${project.title}, ${project.kind.toLowerCase()} screen`" loading="lazy" decoding="async" class="block w-full origin-top" />
         </div>
         <span class="absolute top-4 left-4 rounded-full bg-card/85 px-2.5 py-1 font-mono text-[11px] text-dim backdrop-blur">{{ project.kind }}</span>
       </div>

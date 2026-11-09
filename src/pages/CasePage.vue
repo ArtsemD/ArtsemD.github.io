@@ -58,8 +58,8 @@ watchEffect(() => {
       </div>
     </section>
 
-    <div class="wrap" v-reveal>
-      <BrowserFrame :src="project.cover.src" :bar="project.cover.bar" :alt="`${project.title}, main screen`" eager />
+    <div class="wrap">
+      <BrowserFrame v-scroll3d="'flip'" :src="project.cover.src" :bar="project.cover.bar" :alt="`${project.title}, main screen`" eager />
     </div>
 
     <section class="wrap py-20 md:py-28" aria-labelledby="points-title">
@@ -74,8 +74,8 @@ watchEffect(() => {
     </section>
 
     <section v-if="project.shots.length" class="wrap space-y-16 pb-20 md:pb-28" aria-label="Screens">
-      <figure v-for="s in project.shots" :key="s.src" v-reveal>
-        <BrowserFrame :src="s.src" :bar="s.bar" :alt="s.caption ?? project.title" />
+      <figure v-for="s in project.shots" :key="s.src">
+        <BrowserFrame v-scroll3d="'flip'" :src="s.src" :bar="s.bar" :alt="s.caption ?? project.title" />
         <figcaption v-if="s.caption" class="label mt-4">{{ s.caption }}</figcaption>
       </figure>
     </section>

@@ -4,6 +4,7 @@ import App from './App.vue'
 import Home from './pages/HomePage.vue'
 import { reveal } from './reveal'
 import { tilt } from './tilt'
+import { scroll3d } from './scroll3d'
 import './style.css'
 
 const router = createRouter({
@@ -20,4 +21,4 @@ const router = createRouter({
   },
 })
 
-createApp(App).use(router).directive('reveal', reveal).directive('tilt', tilt).mount('#app')
+createApp(App).use(router).directive('reveal', reveal).directive('tilt', tilt).directive('scroll3d', scroll3d).mount('#app')

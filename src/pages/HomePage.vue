@@ -117,8 +117,7 @@ const github = profile.links.find((l) => l.label === 'GitHub')!
       </h2>
       <p class="mx-auto mt-6 max-w-md text-lg text-dim" v-reveal="160">Happy to walk through any of these projects live, including the code.</p>
       <div class="pointer-events-auto mt-10 flex flex-wrap justify-center gap-3" v-reveal="240">
-        <a v-if="profile.email" :href="`mailto:${profile.email}`" class="rounded-full bg-fg px-6 py-3 text-[15px] font-medium text-card transition-colors hover:bg-accent">Email me</a>
-        <a :href="demo.href" target="_blank" rel="noopener" class="rounded-full px-6 py-3 text-[15px] font-medium transition-colors" :class="profile.email ? 'border border-line-2 bg-card hover:border-fg' : 'bg-fg text-card hover:bg-accent'">Open the live demo ↗</a>
+        <a :href="demo.href" target="_blank" rel="noopener" class="rounded-full bg-fg px-6 py-3 text-[15px] font-medium text-card transition-colors hover:bg-accent">Open the live demo ↗</a>
         <a :href="github.href" target="_blank" rel="noopener" class="rounded-full border border-line-2 bg-card px-6 py-3 text-[15px] font-medium transition-colors hover:border-fg">GitHub ↗</a>
       </div>
     </div>

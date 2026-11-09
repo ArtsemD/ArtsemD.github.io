@@ -32,7 +32,6 @@ onBeforeUnmount(() => clearInterval(timer))
       <nav aria-label="Elsewhere">
         <p class="label mb-4 text-card/40">Elsewhere</p>
         <ul class="space-y-2 text-sm">
-          <li v-if="profile.email"><a :href="`mailto:${profile.email}`" class="text-card/70 transition-colors hover:text-accent">Email</a></li>
           <li v-for="l in profile.links" :key="l.href">
             <a :href="l.href" target="_blank" rel="noopener" class="text-card/70 transition-colors hover:text-accent">{{ l.label }} ↗</a>
           </li>
